@@ -1,19 +1,25 @@
 <template>
-  <div class="wrapper">
-    <swiper :options="swiperOption">
+  <div class="wrapper" :options="swiperOption">
+    <swiper>
         <!-- slides -->
 <!--    <swiper-slide v-for="item of swiperList" :key="item.id">
           <img class="swiper-image" :src="item.imgUrl">
         </swiper-slide> -->
 
         <swiper-slide>
-          <img class="swiper-image" src="@/assets/swiper-img/1.jpg">
+          <div>
+            <img class="swiper-image" src="@/assets/swiper-img/1.jpg">
+          </div>
         </swiper-slide>
         <swiper-slide>
+          <div>
           <img class="swiper-image" src="@/assets/swiper-img/2.jpg">
+          </div>
         </swiper-slide>
         <swiper-slide>
+          <div>
           <img class="swiper-image" src="@/assets/swiper-img/3.jpg">
+          </div>
         </swiper-slide>
 
         <!-- Optional controls -->
@@ -59,7 +65,7 @@ export default {
     width: 100%
     height: 0
     overflow: hidden
-    padding-bottom: 31.25%
+    padding-bottom: 26.66%
     .swiper-image
       width: 100%
 </style>
