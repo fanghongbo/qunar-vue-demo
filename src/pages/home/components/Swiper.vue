@@ -1,11 +1,7 @@
 <template>
-  <div class="wrapper" :options="swiperOption">
+  <div class="wrapper">
+    <!-- <swiper :options="swiperOption"> -->
     <swiper>
-        <!-- slides -->
-<!--    <swiper-slide v-for="item of swiperList" :key="item.id">
-          <img class="swiper-image" :src="item.imgUrl">
-        </swiper-slide> -->
-
         <swiper-slide>
           <div>
             <img class="swiper-image" src="@/assets/swiper-img/1.jpg">
