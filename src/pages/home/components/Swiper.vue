@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
-    <!-- <swiper :options="swiperOption"> -->
-    <swiper>
+    <swiper :options="swiperOption">
         <swiper-slide>
           <div>
             <img class="swiper-image" src="@/assets/swiper-img/1.jpg">
@@ -36,7 +35,9 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        loop: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: true
       },
       swiperList: [{
         id: '0001',

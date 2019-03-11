@@ -26,7 +26,9 @@ export default {
   name: 'IndexIcons',
   data () {
     return {
-      swiperOption: {},
+      swiperOption: {
+        autoplay: false
+      },
       dataList: [{
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -93,31 +95,34 @@ export default {
     height: 0
     padding-bottom: 50%
 
-  .icon
-    width: 25%
-    height: 0
-    position: relative
-    overflow: hidden
-    padding-bottom: 25%
-    float: left
+  .icons
+    margin-top: .1rem
 
-    .icon-img
-      position: absolute
-      bottom: .60rem
-      top: 0
-      left: 0
-      right: 0
-      padding: .1rem
-      box-sizing: border-box
-      text-align: center
+    .icon
+      width: 25%
+      height: 0
+      position: relative
+      overflow: hidden
+      padding-bottom: 25%
+      float: left
 
-      .icon-img-content
-        height: 100%
-        margin: 1px auto
-        display: block
+      .icon-img
+        position: absolute
+        bottom: .60rem
+        top: 0
+        left: 0
+        right: 0
+        padding: .1rem
+        box-sizing: border-box
+        text-align: center
 
-    .icon-desc
-      color: $darkTextColor
-      ellipsis()
+        .icon-img-content
+          height: 100%
+          margin: 1px auto
+          display: block
+
+      .icon-desc
+        color: $darkTextColor
+        ellipsis()
 
 </style>
