@@ -1,19 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
-        <swiper-slide>
+    <swiper :options="swiperOption" v-if="swiperList.length">
+        <swiper-slide v-for="item of swiperList" :key="item.id">
           <div>
-            <img class="swiper-image" src="@/assets/swiper-img/1.jpg">
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div>
-          <img class="swiper-image" src="@/assets/swiper-img/2.jpg">
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div>
-          <img class="swiper-image" src="@/assets/swiper-img/3.jpg">
+            <img class="swiper-image" :src="item.imgUrl">
           </div>
         </swiper-slide>
 
@@ -31,6 +21,9 @@
 <script>
 export default {
   name: 'IndexSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -38,17 +31,7 @@ export default {
         loop: true,
         autoplay: 3000,
         autoplayDisableOnInteraction: true
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: '/assets/swiper-img/1.jpg'
-      }, {
-        id: '0002',
-        imgUrl: '/assets/swiper-img/2.jpg'
-      }, {
-        id: '0003',
-        imgUrl: '/assets/swiper-img/3.jpg'
-      }]
+      }
     }
   }
 }
