@@ -4,17 +4,23 @@
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input">
-      <span class="iconfont search-icon">&#xe632;</span>输入城市/景点/游玩主题
+      <span class="iconfont search-icon">&#xe632;</span>
+      <span>输入城市/景点/游玩主题</span>
   </div>
-    <div class="header-right">城市
-      <span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">{{ this.city }}
+        <span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TopHeader'
+  name: 'TopHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -28,8 +34,8 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display: flex
-    height: .86rem
-    line-height: .86rem
+    height: $headerHeight
+    line-height: $headerHeight
     background: $bgColor
     color: #fff
 
@@ -45,6 +51,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      color: #fff
 
       .arrow-icon
         font-size: .24rem
@@ -62,6 +69,6 @@ export default {
 
       .search-icon
         padding-left: .1rem
-        padding-right: .1rem
+        padding-right: 0
 
 </style>
