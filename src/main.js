@@ -11,6 +11,7 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 import axios from 'axios'
+import store from './store/'
 
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
@@ -21,6 +22,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
