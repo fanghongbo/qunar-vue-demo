@@ -23,7 +23,7 @@ export default {
     line-height: $headerHeight
     background: $bgColor
     text-align: center
-    font-size: .30rem
+    font-size: .32rem
     color: #fff
     .header-left
       width: .64rem
