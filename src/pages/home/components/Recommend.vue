@@ -2,7 +2,8 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <!-- 使用router-link默认渲染的时候是a标签，但是加上了tag的话，渲染的标签按照tag的值来渲染-->
+      <router-link tag='li' class="item border-bottom" v-for="item of recommendList" :key="item.id" :to="'/detail/' + item.id">
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -14,7 +15,7 @@
             <span class="item-area">{{ item.area }}</span>
           </div>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>

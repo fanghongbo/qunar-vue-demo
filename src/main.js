@@ -12,6 +12,8 @@ import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 import axios from 'axios'
 import store from './store/'
+// 解决低端手机白屏问题
+import 'babel-polyfill'
 
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
